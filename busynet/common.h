@@ -1,5 +1,7 @@
 #pragma once
 
+#include <iostream>
+
 namespace busynet
 {
 // Rust language Primitive Types
@@ -16,7 +18,13 @@ typedef unsigned long usize;
 typedef float f32;
 typedef double f64;
 
+typedef u32 uint32_t;
+typedef u64 uint64_t;
+typedef i32 int32_t;
+typedef i64 int64_t;
+
+
 #define DISABLE_COPY(Class)      \
-  Class(const Class &) = delete; \
-  Class &operator=(const Class &) = delete;
+  Class(const Class &); \
+  Class &operator=(const Class &);
 }
